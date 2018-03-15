@@ -3,11 +3,16 @@ package br.usjt.arqsw.continenteapp;
 import java.util.ArrayList;
 
 /**
- * Created by otavio.costa on 15/03/2018.
+ * Author: Otávio Augusto Soares Costa
+ * RA: 816118924
  */
-
 public class Utils {
 
+    /**
+     * Retorna lista de paises de acordo com o continente
+     * @param continente
+     * @return
+     */
     public static ArrayList<Pais> listarPaisesByContinente(String continente){
         ArrayList<Pais> paises = new ArrayList<>();
         if(continente.equals("Africa")){
@@ -29,6 +34,11 @@ public class Utils {
         return paises;
     }
 
+    /**
+     * Retorna uma lista de nomes do paises
+     * @param paises
+     * @return
+     */
     public static ArrayList<String> listarNomePaises(ArrayList<Pais> paises){
         ArrayList<String> nomePaises = new ArrayList<>();
         for (Pais pais : paises) {
@@ -37,6 +47,10 @@ public class Utils {
         return nomePaises;
     }
 
+    /**
+     * Gera Lista de paises do continente da Africa
+     * @return
+     */
     private static ArrayList<Pais> listarPaisesAfrica(){
         ArrayList<Pais> paisesAfrica = new ArrayList<>();
         paisesAfrica.add(new Pais("Africa do Sul"));
@@ -47,6 +61,10 @@ public class Utils {
         return paisesAfrica;
     }
 
+    /**
+     * Gera Lista de paises dos continentes das Americas
+     * @return
+     */
     private static ArrayList<Pais> listarPaisesAmericas(){
         ArrayList<Pais> paisesAmericas = new ArrayList<>();
         paisesAmericas.add(new Pais("Brasil"));
@@ -57,6 +75,10 @@ public class Utils {
         return paisesAmericas;
     }
 
+    /**
+     * Gera Lista de paises do continente da Asia
+     * @return
+     */
     private static ArrayList<Pais> listarPaisesAsia(){
         ArrayList<Pais> paisesAsia = new ArrayList<>();
         paisesAsia.add(new Pais("Japão"));
@@ -67,6 +89,10 @@ public class Utils {
         return paisesAsia;
     }
 
+    /**
+     * Gera Lista de paises do continente da Europe
+     * @return
+     */
     private static ArrayList<Pais> listarPaisesEurope(){
         ArrayList<Pais> paisesEurope = new ArrayList<>();
         paisesEurope.add(new Pais("Alemanha"));
@@ -76,6 +102,11 @@ public class Utils {
         paisesEurope.add(new Pais("França"));
         return paisesEurope;
     }
+
+    /**
+     * Gera Lista de paises do continente da Oceania
+     * @return
+     */
     private static ArrayList<Pais> listarPaisesOceania(){
         ArrayList<Pais> paisesOceania = new ArrayList<>();
         paisesOceania.add(new Pais("Austrália"));

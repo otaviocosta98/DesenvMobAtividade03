@@ -7,11 +7,22 @@ import java.text.Collator;
 import java.util.ArrayList;
 
 /**
- * Created by otavio.costa on 15/03/2018.
+ * Author: Otávio Augusto Soares Costa
+ * RA: 816118924
  */
-
 public class Pais implements Serializable, Comparable{
 
+    /**
+     * Contrutor Padrão
+     */
+    public Pais(){
+
+    }
+
+    /**
+     * Construtor com nome
+     * @param nome
+     */
     public Pais(String nome){
         this.nome = nome;
     }

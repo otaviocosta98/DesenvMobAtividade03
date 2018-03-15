@@ -11,6 +11,10 @@ import android.widget.ListView;
 
 import java.util.ArrayList;
 
+/**
+ * Author: Otávio Augusto Soares Costa
+ * RA: 816118924
+ */
 public class ListarPaisesContinenteActivity extends Activity {
 
     public static final String PAIS = "br.usjt.desmob.geodata.pais";
