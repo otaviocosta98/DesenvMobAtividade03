@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/ContinenteApp.iml" filepath="$PROJECT_DIR$/ContinenteApp.iml" />
+      <module fileurl="file://C:\Users\Auguston\StudioProjects\DesenvMobAtividade03\ContinenteApp.iml" filepath="C:\Users\Auguston\StudioProjects\DesenvMobAtividade03\ContinenteApp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/DesenvMobAtividade03.iml" filepath="$PROJECT_DIR$/.idea/DesenvMobAtividade03.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>
