@@ -4,11 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="br.usjt.arqsw.continenteapp.ListarPaisesContinenteActivity">
+    tools:context="br.usjt.arqsw.continenteapp.controller.ListarPaisesContinenteActivity">
 
     <ListView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/listar_paises"></ListView>
+        android:id="@+id/listar_paises"
+        android:fastScrollEnabled="true" />
 
 </LinearLayout>

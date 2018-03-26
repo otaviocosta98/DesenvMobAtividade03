@@ -2,6 +2,9 @@
     <string name="app_name">ContinenteApp</string>
     <string name="buscar_paises_continente">Buscar Países</string>
     <string name="text_spinner_continentes">Seleiconar um continente:</string>
+    <string name="txt_nome">Nome:</string>
+    <string name="txt_capital">Capital: </string>
+    <string name="txt_regiao">Região:</string>
     <string-array name="continentes">
         <item>Todos</item>
         <item>Africa</item>
