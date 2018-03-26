@@ -23,7 +23,7 @@ public class ListarPaisesContinenteActivity extends Activity {
 
     public static final String PAIS = "br.usjt.desmob.geodata.pais";
     ArrayList<Pais> paises;
-    ListView lsitView;
+    ListView listView;
     Activity context;
 
     @Override
@@ -33,9 +33,9 @@ public class ListarPaisesContinenteActivity extends Activity {
         Intent intent = getIntent();
         String continente = intent.getStringExtra(MainActivity.LISTAR_PAISES_CONTINENTE);
         paises = Data.listarPaisesByContinente(continente);
-        ListView listView = findViewById(R.id.listar_paises);
+        listView = findViewById(R.id.listar_paises);
         PaisAdapter adapter = new PaisAdapter(this, paises);
-        lsitView.setAdapter(adapter);
+        listView.setAdapter(adapter);
         context = this;
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override

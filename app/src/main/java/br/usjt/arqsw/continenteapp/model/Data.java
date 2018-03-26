@@ -67,11 +67,11 @@ public class Data {
      */
     private static ArrayList<Pais> listarPaisesAmericas(){
         ArrayList<Pais> paisesAmericas = new ArrayList<>();
-        paisesAmericas.add(new Pais(PaisId.BRASIL.nome(), PaisId.BRASIL.rregiao(), PaisId.BRASIL.capital(), PaisId.BRASIL.capital()));
-        paisesAmericas.add(new Pais(PaisId.ESTADOS_UNIDOS.nome(), PaisId.ESTADOS_UNIDOS.rregiao(), PaisId.ESTADOS_UNIDOS.capital(), PaisId.ESTADOS_UNIDOS.capital()));
-        paisesAmericas.add(new Pais(PaisId.CHILE.nome(), PaisId.CHILE.rregiao(), PaisId.CHILE.capital(), PaisId.CHILE.capital()));
-        paisesAmericas.add(new Pais(PaisId.ARGENTINA.nome(), PaisId.ARGENTINA.rregiao(), PaisId.ARGENTINA.capital(), PaisId.ARGENTINA.capital()));
-        paisesAmericas.add(new Pais(PaisId.URUGUAI.nome(), PaisId.URUGUAI.rregiao(), PaisId.URUGUAI.capital(), PaisId.URUGUAI.capital()));
+        paisesAmericas.add(new Pais(PaisId.BRASIL.nome(), PaisId.BRASIL.rregiao(), PaisId.BRASIL.capital(), PaisId.BRASIL.bandeira()));
+        paisesAmericas.add(new Pais(PaisId.ESTADOS_UNIDOS.nome(), PaisId.ESTADOS_UNIDOS.rregiao(), PaisId.ESTADOS_UNIDOS.capital(), PaisId.ESTADOS_UNIDOS.bandeira()));
+        paisesAmericas.add(new Pais(PaisId.CHILE.nome(), PaisId.CHILE.rregiao(), PaisId.CHILE.capital(), PaisId.CHILE.bandeira()));
+        paisesAmericas.add(new Pais(PaisId.ARGENTINA.nome(), PaisId.ARGENTINA.rregiao(), PaisId.ARGENTINA.capital(), PaisId.ARGENTINA.bandeira()));
+        paisesAmericas.add(new Pais(PaisId.URUGUAI.nome(), PaisId.URUGUAI.rregiao(), PaisId.URUGUAI.capital(), PaisId.URUGUAI.bandeira()));
         return paisesAmericas;
     }
 
@@ -111,7 +111,7 @@ public class Data {
         ArrayList<Pais> paisesOceania = new ArrayList<>();
         paisesOceania.add(new Pais(PaisId.AUSTRALIA.nome(), PaisId.AUSTRALIA.rregiao(), PaisId.AUSTRALIA.capital(), PaisId.AUSTRALIA.bandeira()));
         paisesOceania.add(new Pais(PaisId.NOVA_ZELANDIA.nome(), PaisId.NOVA_ZELANDIA.rregiao(), PaisId.NOVA_ZELANDIA.capital(), PaisId.NOVA_ZELANDIA.bandeira()));
-        paisesOceania.add(new Pais(PaisId.NOVA_GUINE.nome(), PaisId.NOVA_GUINE.rregiao(), PaisId.NOVA_GUINE.capital(), PaisId.NOVA_GUINE.bandeira()));
+        paisesOceania.add(new Pais(PaisId.INDONESIA.nome(), PaisId.INDONESIA.rregiao(), PaisId.INDONESIA.capital(), PaisId.INDONESIA.bandeira()));
         paisesOceania.add(new Pais(PaisId.SAMOA.nome(), PaisId.SAMOA.rregiao(), PaisId.SAMOA.capital(), PaisId.SAMOA.bandeira()));
         paisesOceania.add(new Pais(PaisId.FIJI.nome(), PaisId.FIJI.rregiao(), PaisId.FIJI.capital(), PaisId.FIJI.bandeira()));
         return paisesOceania;
