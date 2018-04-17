@@ -8,12 +8,14 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
+import java.io.IOException;
 import java.util.ArrayList;
 
 import br.usjt.arqsw.continenteapp.R;
 import br.usjt.arqsw.continenteapp.model.Pais;
 import br.usjt.arqsw.continenteapp.model.Data;
 import br.usjt.arqsw.continenteapp.model.PaisAdapter;
+import br.usjt.arqsw.continenteapp.model.PaisNetwork;
 
 /**
  * Author: Otávio Augusto Soares Costa
@@ -30,9 +32,14 @@ public class ListarPaisesContinenteActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_listar_paises_continente);
-        Intent intent = getIntent();
+        final Intent intent = getIntent();
         String continente = intent.getStringExtra(MainActivity.LISTAR_PAISES_CONTINENTE);
-        paises = Data.listarPaisesByContinente(continente);
+            try {
+                paises = PaisNetwork.buscarPaises("http:/192.168.6.214:8080/desenvmob_pais/rest/paises");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+//        paises = Data.listarPaisesByContinente(continente);
         listView = findViewById(R.id.listar_paises);
         PaisAdapter adapter = new PaisAdapter(this, paises);
         listView.setAdapter(adapter);
