@@ -1,10 +1,12 @@
 package br.usjt.arqsw.continenteapp.model;
 
+import android.graphics.Bitmap;
 import android.support.annotation.NonNull;
 
 import java.io.Serializable;
 import java.text.Collator;
 import java.util.ArrayList;
+import java.util.Date;
 
 /**
  * Author: Otávio Augusto Soares Costa
@@ -30,6 +32,8 @@ public class Pais implements Serializable, Comparable{
         this.nome = nome; this.regiao = regiao; this.capital = capital; this.bandeira = bandeira;
     }
 
+    public final static String DATE_PATTERN = "dd-MM-yyyy'T'HH:mm:ss'Z'Z";
+
     private String nome;
     private String codigo3;
     private String capital;
@@ -47,7 +51,8 @@ public class Pais implements Serializable, Comparable{
     private ArrayList<String> fronteiras;
     private double latitude;
     private double longitude;
-
+    private Bitmap imagem;
+    private Date dataAtualizacao;
 
     public String getNome() {
         return nome;
@@ -183,6 +188,31 @@ public class Pais implements Serializable, Comparable{
 
     public void setLongitude(double longitude) {
         this.longitude = longitude;
+    }
+
+    public Bitmap getImagem() {
+        return imagem;
+    }
+
+    public void setImagem(Bitmap imagem) {
+        this.imagem = imagem;
+    }
+
+    public Date getDataAtualizacao() {
+        return dataAtualizacao;
+    }
+
+    public void setDataAtualizacao(Date dataAtualizacao) {
+        this.dataAtualizacao = dataAtualizacao;
+    }
+
+    public static int getPais(ArrayList<Pais> paises, String nome){
+        for(int i = 0; i <paises.size(); i++){
+            if(paises.get(i).getNome() == nome){
+                return i;
+            }
+        }
+        return -1;
     }
 
     @Override

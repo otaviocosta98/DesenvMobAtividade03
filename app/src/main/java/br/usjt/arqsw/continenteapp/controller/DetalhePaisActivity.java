@@ -24,8 +24,12 @@ public class DetalhePaisActivity extends Activity {
         Intent intent = getIntent();
         Pais pais = (Pais)intent.getSerializableExtra(ListarPaisesContinenteActivity.PAIS);
         ImageView foto = (ImageView) findViewById(R.id.foto_pais_detalhe);
-        Drawable drawable = Util.getDrawableDinamic(this, pais.getBandeira());
-        foto.setImageDrawable(drawable);
+        try {
+            foto.setImageBitmap(MainActivity._paises.get(Pais.getPais(MainActivity._paises,
+                    pais.getNome())).getImagem());
+        } catch (Exception e){
+            foto.setImageDrawable(getDrawable(R.drawable.ic_not_found));
+        }
         TextView nome = (TextView)findViewById(R.id.valor_nome_pais);
         nome.setText(pais.getNome());
         TextView regiao = (TextView)findViewById(R.id.valor_regiao_pais);

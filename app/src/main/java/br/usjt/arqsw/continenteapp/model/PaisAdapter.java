@@ -8,9 +8,11 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import java.io.IOException;
 import java.util.ArrayList;
 
 import br.usjt.arqsw.continenteapp.R;
+import br.usjt.arqsw.continenteapp.controller.MainActivity;
 
 /**
  * Created by Auguston on 25/03/2018.
@@ -24,7 +26,7 @@ public class PaisAdapter extends BaseAdapter {
 
     public PaisAdapter(Context context, ArrayList<Pais> paises) {
         this.context = context;
-        this.paises = paises;
+        this.paises = MainActivity._paises;
     }
 
     @Override
@@ -62,7 +64,11 @@ public class PaisAdapter extends BaseAdapter {
 
         Pais pais = paises.get(position);
         ViewHolder viewHolder = (ViewHolder) view.getTag();
-        viewHolder.getImagem().setImageDrawable(Util.getDrawableDinamic(context, pais.getBandeira()));
+        try {
+            viewHolder.getImagem().setImageBitmap(paises.get(Pais.getPais(paises, pais.getNome())).getImagem());
+        } catch(Exception e){
+            viewHolder.getImagem().setImageDrawable(context.getDrawable(R.drawable.ic_not_found));
+        }
         viewHolder.getNome().setText(pais.getNome());
         viewHolder.getRegiao().setText(pais.getRegiao());
         viewHolder.getCapital().setText(pais.getCapital());

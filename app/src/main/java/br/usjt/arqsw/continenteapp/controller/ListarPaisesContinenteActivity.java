@@ -33,13 +33,7 @@ public class ListarPaisesContinenteActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_listar_paises_continente);
         final Intent intent = getIntent();
-        String continente = intent.getStringExtra(MainActivity.LISTAR_PAISES_CONTINENTE);
-            try {
-                paises = PaisNetwork.buscarPaises("http:/192.168.6.214:8080/desenvmob_pais/rest/paises");
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-//        paises = Data.listarPaisesByContinente(continente);
+        paises = (ArrayList<Pais>) intent.getSerializableExtra(MainActivity.LISTAR_PAISES_CONTINENTE);
         listView = findViewById(R.id.listar_paises);
         PaisAdapter adapter = new PaisAdapter(this, paises);
         listView.setAdapter(adapter);
